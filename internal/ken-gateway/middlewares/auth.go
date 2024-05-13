@@ -66,7 +66,6 @@ func loginUrl(localInstance *consul.LocalServiceRegister, uri string) (string, e
 	if instance == nil {
 		return "", errors.New("服务不存在")
 	}
-	fmt.Println(instance)
 	url := fmt.Sprintf("http://%s:%s/api/%s/%s", instance.GetHost(), instance.GetPort(), "v1", "login"+"?"+query)
 	return url, nil
 }

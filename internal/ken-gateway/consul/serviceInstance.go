@@ -21,6 +21,7 @@ type ServiceInstance interface {
 	GetMetaData() map[string]string
 }
 
+// Service Consul 当前网关服务实例
 type Service struct {
 	InstanceId string            `json:"instanceId,omitempty" yaml:"instanceId"`
 	ServiceId  string            `json:"serviceId,omitempty" yaml:"serviceId"`
@@ -30,6 +31,7 @@ type Service struct {
 	MetaData   map[string]string `json:"metaData,omitempty" yaml:"metaData"`
 }
 
+// Check Consul 健康检查
 type Check struct {
 	Http                           string `json:"http,omitempty" yaml:"http"`
 	Timeout                        string `json:"timeout,omitempty" yaml:"timeout"`
